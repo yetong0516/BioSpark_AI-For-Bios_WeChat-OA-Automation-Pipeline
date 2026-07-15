@@ -1,0 +1,29 @@
+# 凭证：绝不入库（整个 secrets/ 目录，仅放行示例模板）
+secrets/*
+!secrets/weixin.example.json
+*.access_token
+*.token
+
+# 运行台账与内部记录（含审核日志、选题历史、交接笔记）
+state/review_log.md
+state/topic_history.jsonl
+state/candidates/
+state/*.tmp
+STATUS.md
+
+# 运行产物
+drafts/
+output/
+published/
+images/
+
+# 本地工具状态
+.omc/
+.claude/settings.local.json
+
+# Python
+**/__pycache__/
+*.pyc
+
+# 系统
+.DS_Store

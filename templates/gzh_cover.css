@@ -1,0 +1,56 @@
+/* gzh_cover.css — 公众号封面 900x383 (2.35:1)
+ * 注意：封面是 playwright 截图源（不参与公众号粘贴），所以这里可以正常用 class / 外链 CSS。
+ * cover_gzh.html 里写 <div class="card card-cover-gzh">…</div>，screenshot_cards.py 靠 .card 选中。
+ * 视觉沿用 xhs_cards.css 的封面：全幅图 + 底部暗渐变 + 青绿高亮标题。
+ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f5f5f5; }
+
+.card {
+  width: 900px;
+  height: 383px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", "SimHei", "PingFang SC", sans-serif;
+}
+
+/* 全幅背景图 */
+.card-cover-gzh .hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* 暗渐变保证标题可读 */
+.card-cover-gzh .gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.45) 48%, rgba(0,0,0,0.15) 100%);
+}
+
+/* 左上角领域标签 */
+.card-cover-gzh .tag {
+  position: absolute; top: 26px; left: 36px;
+  background: rgba(78,205,196,0.18);
+  border: 1px solid rgba(78,205,196,0.55);
+  border-radius: 6px;
+  padding: 6px 16px; font-size: 18px; letter-spacing: 2px;
+  color: #4ecdc4;
+}
+
+/* 标题区（左下） */
+.card-cover-gzh .title-box {
+  position: absolute; left: 36px; right: 36px; bottom: 34px;
+}
+.card-cover-gzh h1 {
+  font-size: 46px; font-weight: 800; line-height: 1.25;
+  letter-spacing: 1px; color: #fff;
+}
+.card-cover-gzh h1 .hl { color: #4ecdc4; }
+.card-cover-gzh .sub {
+  font-size: 19px; color: rgba(255,255,255,0.72);
+  line-height: 1.5; margin-top: 12px;
+}
+.card-cover-gzh .src {
+  position: absolute; right: 36px; bottom: 22px;
+  font-size: 14px; color: rgba(255,255,255,0.45);
+}
