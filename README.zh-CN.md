@@ -28,6 +28,12 @@ flowchart TD
     G -->|edit / skip| E
 ```
 
+## 演示 —— 看看产出长啥样
+
+想直接看产线产出的效果?**[`demo/`](demo/)** 放了一篇真实的自动排版公众号长图文([HTML 源码](demo/wechat-article-demo.html) + [整页截图](demo/wechat-article-demo.png)),展示板块主题色、6 段学术架构、粘贴不掉格式的内联样式。(第三方配图已替换为占位框。)
+
+![公众号自动排版演示](demo/wechat-article-demo.png)
+
 ## 板块与主题色
 
 每篇文章判定为四个板块之一,对应各自的主题色:

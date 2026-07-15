@@ -28,6 +28,12 @@ flowchart TD
     G -->|edit / skip| E
 ```
 
+## Demo — see the output
+
+Want to see what the pipeline actually produces? **[`demo/`](demo/)** contains one real auto-formatted WeChat article ([HTML](demo/wechat-article-demo.html) + [full-page screenshot](demo/wechat-article-demo.png)), showing the section theming, 6-part academic structure, and paste-surviving inline styles. (Third-party figures are replaced with placeholders.)
+
+![WeChat article formatting demo](demo/wechat-article-demo.png)
+
 ## Section themes
 
 Each article is classified into one of four sections, which sets its accent color:
