@@ -16,16 +16,16 @@
 
 ```mermaid
 flowchart TD
-    A[阶段 0 · 定日期 + 读 topic_history<br/>选题去重台账] --> B[阶段 1 · 新闻发现<br/>WebSearch:Nature/Science/Cell/bioRxiv/NIH…]
-    B --> C[阶段 2 · 多源抓取<br/>site_scraper.py · 403 自动回退渲染]
-    C --> D[阶段 3 · 图片筛选<br/>尺寸 / 比例 / 关键词规则 → 配图]
-    D --> E[阶段 4 · 中文写稿<br/>article.md + caption.txt + sources.json]
-    E --> F1[阶段 5-GZH · 公众号长图文<br/>内联样式 HTML + 封面 PNG + 套主题]
-    E --> F2[阶段 5-XHS · 小红书<br/>6 张固定卡片]
-    F1 --> G[阶段 6 · 人工审核闸<br/>REVIEW.md · approve / edit / skip]
+    A["阶段 0 · 定日期 + 读去重台账"] --> B["阶段 1 · 新闻发现<br/>联网搜索 Nature / Science / Cell / bioRxiv / NIH"]
+    B --> C["阶段 2 · 多源抓取<br/>site_scraper.py（403 自动回退渲染）"]
+    C --> D["阶段 3 · 图片筛选<br/>尺寸 / 比例 / 关键词规则"]
+    D --> E["阶段 4 · 中文写稿<br/>article.md + caption.txt + sources.json"]
+    E --> F1["阶段 5-GZH · 公众号长图文<br/>内联样式 HTML + 封面 + 套主题"]
+    E --> F2["阶段 5-XHS · 小红书<br/>6 张固定卡片"]
+    F1 --> G["阶段 6 · 人工审核闸<br/>REVIEW.md · 通过 / 修订 / 跳过"]
     F2 --> G
-    G -->|approve| H[仅推进公众号草稿箱<br/>gzh_publish.py --draft-push]
-    G -->|edit / skip| E
+    G -->|通过| H["仅推进公众号草稿箱<br/>gzh_publish.py --draft-push（绝不群发）"]
+    G -->|修订 / 跳过| E
 ```
 
 ## 演示 —— 看看产出长啥样
