@@ -51,7 +51,7 @@ flowchart TD
 
 ```bash
 # 方式 A —— clone 到你的 Claude 技能目录
-git clone git@github.com:yetong0516/BioSpark-AI-For-Bios-WeChat-OA-Automation-Pipeline.git \
+git clone git@github.com:yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline.git \
   ~/.claude/skills/ai4s-pipeline
 
 # 方式 B —— 只把 SKILL.md 复制进 ~/.claude/skills/ai4s-pipeline/

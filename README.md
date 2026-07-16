@@ -51,7 +51,7 @@ This is a Claude Code Skill. Put it where Claude Code discovers skills:
 
 ```bash
 # Option A — clone into your Claude skills directory
-git clone git@github.com:yetong0516/BioSpark-AI-For-Bios-WeChat-OA-Automation-Pipeline.git \
+git clone git@github.com:yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline.git \
   ~/.claude/skills/ai4s-pipeline
 
 # Option B — copy just SKILL.md into ~/.claude/skills/ai4s-pipeline/
