@@ -4,6 +4,20 @@
 
 **中文文档 → [README.zh-CN.md](README.zh-CN.md)**
 
+<div align="center">
+
+<!-- LOGO_SLOT -->
+
+### 📣 关注公众号 **AI For Bios** · BioSpark
+
+*BioSpark ｜ AI For BioScience 专属平台 —— 全球前沿文献解读、行业动态、算法应用与效率工具，汇聚科研灵感，高效探索新知。*
+
+**边缘行者（广州）技术有限公司** 出品 · 微信搜索 **「AI For Bios」** 关注
+
+<sub>本仓库产出的内容即发布于此公众号 · Content produced by this pipeline is published on the WeChat account **AI For Bios**.</sub>
+
+</div>
+
 ---
 
 ## What it is
