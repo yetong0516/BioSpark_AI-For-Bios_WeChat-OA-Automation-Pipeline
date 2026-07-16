@@ -10,7 +10,7 @@
 
 ### 📣 关注公众号 **AI For Bios** · BioSpark
 
-*BioSpark ｜ AI For BioScience 专属平台 —— 全球前沿文献解读、行业动态、算法应用与效率工具，汇聚科研灵感，高效探索新知。*
+BioSpark ｜ AI For BioScience 专属平台 —— 全球前沿文献解读、行业动态、算法应用与效率工具，汇聚科研灵感，高效探索新知。
 
 **边缘行者（广州）技术有限公司** 出品
 
