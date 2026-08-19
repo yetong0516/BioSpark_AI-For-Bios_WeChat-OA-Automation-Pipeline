@@ -170,7 +170,7 @@ ai4s_pipeline/
 | 微信公众号 / 小红书 / 任何变现账号用本工具生产内容 | ⚠️ **需要单独签商业授权** |
 
 > Change Date：**2030-08-19**（届时自动转 **Apache License 2.0**，彻底开源）。
-> 商业授权联系：[open-source@biospark.example](mailto:open-source@biospark.example)（占位地址，发布前请替换为真实邮箱）
+> 商业授权联系：[yetong0516@gmail.com](mailto:yetong0516@gmail.com)
 
 ---
 
@@ -193,8 +193,7 @@ permission and source attribution — is infringing. See:
 - **[COPYRIGHT.md](COPYRIGHT.md)** — full copyright statement (what is owned, what is allowed, what is forbidden)
 - **[NOTICE.md](NOTICE.md)** — how to report infringement, mail template, response SLA
 
-To report infringement: **[dmca@biospark.example](mailto:dmca@biospark.example)** *(placeholder,
-replace with your real mailbox before publishing)*.
+To report infringement: **[yetong0516@gmail.com](mailto:yetong0516@gmail.com)**.
 
 > ⚠️ GitHub-side notices have **no enforcement power on their own** — they establish authorship
 > and provide a paper trail. **The actual protection comes from**:

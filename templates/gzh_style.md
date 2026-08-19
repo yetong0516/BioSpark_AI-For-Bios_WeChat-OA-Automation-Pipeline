@@ -261,7 +261,7 @@ accent 当文字色/实色块（不在 accent 上压字），三套主题都清�
   </div>
   <div style="color:#999;font-size:12px;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e5e5;">
     转载 / 洗稿 / 未授权使用本产线产出内容均构成侵权。
-    举报邮箱：<span style="color:#16a394;">dmca@biospark.example</span>（占位，发布前替换为真实地址）
+    举报邮箱：<span style="color:#16a394;">yetong0516@gmail.com</span>
   </div>
 </section>
 ```

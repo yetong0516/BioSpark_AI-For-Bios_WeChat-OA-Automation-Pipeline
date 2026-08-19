@@ -164,8 +164,7 @@ ai4s_pipeline/
 | 微信公众号 / 小红书 / 任何变现账号用本工具生产内容 | ⚠️ **需要单独签商业授权** |
 
 > Change Date：**2030-08-19**（届时自动转 **Apache License 2.0**，彻底开源）。
-> 商业授权联系：[open-source@biospark.example](mailto:open-source@biospark.example)
-> （占位地址，发布前请替换为真实邮箱）
+> 商业授权联系：[yetong0516@gmail.com](mailto:yetong0516@gmail.com)
 
 ---
 
@@ -187,7 +186,7 @@ ai4s_pipeline/
 - **[COPYRIGHT.md](COPYRIGHT.md)** —— 完整版权声明（归属范围、允许清单、禁止清单）
 - **[NOTICE.md](NOTICE.md)** —— 侵权举报渠道、邮件模板、处理时效承诺
 
-侵权举报邮箱：**[dmca@biospark.example](mailto:dmca@biospark.example)** *(占位地址，发布前请替换为真实邮箱)*
+侵权举报邮箱：**[yetong0516@gmail.com](mailto:yetong0516@gmail.com)**
 
 > ⚠️ GitHub 侧的声明**本身没有强制执行力**——它的作用是**固化作者身份 + 留证据链**。
 > 真正起作用的保护是三层：
