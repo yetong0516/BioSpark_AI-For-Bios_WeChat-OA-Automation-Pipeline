@@ -1,9 +1,29 @@
 #!/usr/bin/env python3
-"""fetch_openfig.py — 从开放预印本(bioRxiv 等)抓论文原图，用于「顶刊精读」。
+"""fetch_openfig.py — 从开放预印本(bioRxiv 等)抓论文原图，**仅供内部参考**。
 
-为什么需要它：Nature/Science 正刊图有付费墙+版权；开放的 bioRxiv 预印本图可署名转载，
-但 bioRxiv 用 Cloudflare 人机验证挡住了 curl/requests（返回"Just a moment"挑战页）。
-本脚本用 playwright 真浏览器内核过掉 Cloudflare，再在"已过验证的页面里"取图。
+⚠️ 重要版权提示（修复 R-16：bioRxiv 默认协议为 CC-BY-NC-ND 4.0）：
+
+    bioRxiv 预印本**不是**简单的"署名即可转载"。其默认许可 **CC-BY-NC-ND 4.0** 包含
+    三项约束：
+      • **BY** — 必须署名原作者与来源
+      • **NC** — **禁止商业使用**（公众号「AI For Bios」运营主体是商业公司
+                "边缘行者（广州）技术有限公司"，直接发布即违约）
+      • **ND** — **禁止演绎**（AI 重写/配文改写属于演绎，除非落入合理使用）
+
+    本脚本抓到的图，**默认不可直接发布到公众号**。正确做法是：
+      1. 用抓到的图作为「内部参考」，自行绘制「解读图」「重制图」再发布，
+         配文标"重制图，原图见 bioRxiv <doi>"；
+      2. 或者改用 PMC（PubMed Central）的 **CC-BY** 开放访问版本（NIH 资助的
+         多数论文在 PMC 有 CC-BY 子集）；
+      3. 或者**完全不**用原图，改用自制信息图。
+
+    风险：NC 违约 + ND 违约同时触发时，bioRxiv 出版方（冷泉港实验室）有
+    较积极的维权记录；同行反向举报到微信平台也会成立。
+
+技术说明：
+    为什么需要它：bioRxiv 用 Cloudflare 人机验证挡住了 curl/requests
+    （返回"Just a moment"挑战页）。本脚本用 playwright 真浏览器内核过掉
+    Cloudflare，再在"已过验证的页面里"取图。
 
 用法：
     python3 scripts/fetch_openfig.py <bioRxiv .full 页面URL> <输出目录> [最大图号=9]
@@ -13,8 +33,7 @@
       drafts/2026-07-02_xxx/rawfigs 9
 
 抓到的是 F1.jpg、F2.jpg…（论文主图）。best-effort：Cloudflare 偶尔仍会拦个别图，
-多跑一两次或减小并发即可。抓到后自己挑一张有代表性的（通常 F1 是研究设计总图）
-resize 进 images/figures/，正文图注注明"论文原图（bioRxiv 预印本）"。
+多跑一两次或减小并发即可。
 """
 import re, sys, time, base64, os
 from playwright.sync_api import sync_playwright

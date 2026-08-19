@@ -208,7 +208,13 @@ def _check_wx(resp_json: dict, where: str):
         if code == 40164:
             ip = re.search(r"(\d+\.\d+\.\d+\.\d+)", msg)
             if ip:
-                extra = f"\n      → 需加白名单的 IP：{ip.group(1)}"
+                # 隐私：只暴露前 2 段（X.X.*.*），完整 IP 让用户在本机
+                # `curl ifconfig.me` / 路由器后台取。完整 IP 直接打到
+                # 错误日志里会让共享屏幕/截图泄露用户家庭网络位置。
+                ip_masked = ".".join(ip.group(1).split(".")[:2]) + ".*.*"
+                extra = (f"\n      → 需加白名单的 IP：{ip_masked}  "
+                         f"（完整 IP 已掩码；本机查 `curl ifconfig.me` 或 "
+                         f"看路由器后台拿完整值）")
         raise WeixinError(f"[{where}] 微信返回 errcode={code} errmsg={msg}"
                           + (f"\n  提示：{hint}{extra}" if hint else ""))
 
