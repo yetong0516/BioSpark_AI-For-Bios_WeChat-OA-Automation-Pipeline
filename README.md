@@ -1,5 +1,11 @@
 # BioSpark · AI For Bios — WeChat OA Automation Pipeline
 
+> ⚠️ **License 变更公告（2026-08-19）**
+> 本项目 License **从 MIT 改为 BSL 1.1**（Business Source License）。
+> 简而言之：**可以看、可以学、可以贡献；商业使用需另签授权**。
+> 4 年后（2030-08-19）自动转 Apache 2.0。
+> 详细规则见 [LICENSE](LICENSE) 与下方"License"章节。
+
 > A [Claude Code Skill](https://code.claude.com/docs/en/skills) that turns a single life-science topic into a review-ready, dual-platform content package — a WeChat Official Account (公众号) long-form illustrated article **and** a Xiaohongshu (小红书) 6-card set — and then **stops at a human-review gate**. It never auto-publishes.
 
 **中文文档 → [README.zh-CN.md](README.zh-CN.md)**
@@ -152,7 +158,19 @@ ai4s_pipeline/
 
 ## License
 
-[MIT](LICENSE) © BioSpark / AI For Bios
+**[Business Source License 1.1 (BSL 1.1)](LICENSE)** — © BioSpark / AI For Bios
+
+| 你想做什么 | 需要授权吗？ |
+|----------|------------|
+| 读源码 / 改着玩 / 个人学习 | ❌ 不需要 |
+| 学术研究 / 教学 | ❌ 不需要 |
+| 提 PR / Issue / 翻译 / 文档贡献 | ❌ 不需要 |
+| 非商业的开源衍生项目（同 license + 注明出处）| ❌ 不需要 |
+| 商业产品 / SaaS 服务 / 内容商业化运营 | ⚠️ **需要单独签商业授权** |
+| 微信公众号 / 小红书 / 任何变现账号用本工具生产内容 | ⚠️ **需要单独签商业授权** |
+
+> Change Date：**2030-08-19**（届时自动转 **Apache License 2.0**，彻底开源）。
+> 商业授权联系：[open-source@biospark.example](mailto:open-source@biospark.example)（占位地址，发布前请替换为真实邮箱）
 
 ---
 

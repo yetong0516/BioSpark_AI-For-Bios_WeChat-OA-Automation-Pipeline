@@ -1,21 +1,107 @@
-MIT License
+Business Source License 1.1
 
-Copyright (c) 2026 BioSpark / AI For Bios
+Licensor:             BioSpark / AI For Bios
+                      (边缘行者（广州）技术有限公司)
+Licensed Work:        BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline
+                      Copyright (c) 2026 BioSpark / AI For Bios
+                      All Rights Reserved.
+Change Date:          2030-08-19
+Change License:       Apache License, Version 2.0
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Additional Use Grant:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+  Production use of the Licensed Work for **commercial purposes** is
+  NOT permitted without obtaining a separate written commercial
+  license from the Licensor. "Commercial purposes" includes, but is
+  not limited to:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+    (a) using the Licensed Work to operate a paid service
+        (whether subscription, advertising-revenue, sponsorship,
+         paywall, or any other revenue model);
+    (b) using the Licensed Work to produce content for an account
+        that itself generates commercial revenue
+        (e.g. revenue-share, brand sponsorship, paid membership,
+         advertising, or affiliate income), regardless of whether
+         the content is delivered through a public-facing platform
+         such as a WeChat Official Account (公众号), Xiaohongshu
+         (小红书), or any other content-distribution channel;
+    (c) integrating the Licensed Work, in whole or in part, into
+        any commercial product or service offering;
+    (d) reselling, sublicensing, or white-labeling the Licensed
+        Work or any derivative work.
+
+  The following uses are **permitted** without a separate license:
+
+    (a) personal learning, self-study, and evaluation;
+    (b) non-commercial academic research in a university, hospital,
+        or non-profit research institution;
+    (c) contribution back to the upstream BioSpark project
+        (pull requests, issues, documentation, translations);
+    (d) non-commercial open-source derivatives that are themselves
+        released under the same BSL 1.1 terms and that prominently
+        credit the upstream BioSpark project as required by the
+        "Notice" section below.
+
+  The Licensor may grant additional written licenses on terms of
+  their choosing. Contact: open-source@biospark.example
+  (placeholder — replace before publishing).
+
+===============================================================================
+
+The Business Source License (this document, or the "License") is the
+license that governs the use of the Licensed Work. The Licensor may
+publish the Licensed Work under the terms of this License, and You
+may use the Licensed Work only as permitted by this License.
+
+A copy of the License is available at:
+https://mariadb.com/bsl11/
+
+You may use the Licensed Work in any manner, provided that you do
+not use the Licensed Work for any of the following:
+
+  (a) selling the Licensed Work or any derivative work based on the
+      Licensed Work, or including the Licensed Work in a commercial
+      product or service;
+  (b) using the Licensed Work to provide a service to a third party
+      (whether for profit or not); or
+  (c) granting any rights to the Licensed Work under a license that
+      would conflict with the terms of this License.
+
+The Licensor may, at their sole discretion, grant a written license
+to use the Licensed Work under terms that differ from this License.
+
+The Licensor may, at their sole discretion, release the Licensed
+Work (or any portion thereof) under a different License, including
+a more permissive license, at any time. The Licensor may also, at
+their sole discretion, designate a "Change Date" — the date after
+which the Licensed Work will be made available under the "Change
+License" specified above.
+
+On the Change Date (2030-08-19), or earlier at the Licensor's sole
+discretion, this License will terminate, and the Licensed Work will
+be made available under the Apache License, Version 2.0
+(<https://www.apache.org/licenses/LICENSE-2.0>).
+
+===============================================================================
+
+Notice — Required Attribution:
+
+  Any distribution or public display of the Licensed Work, or any
+  derivative work based on the Licensed Work, MUST include the
+  following attribution in a prominent location (e.g. the README
+  file, the about page, the article footer, or a visible part of
+  the user interface):
+
+      BioSpark · AI For Bios
+      Based on BioSpark WeChat OA Automation Pipeline
+      Copyright (c) 2026 BioSpark / AI For Bios
+      Licensed under BSL 1.1
+      https://github.com/yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline
+
+  Removing, obscuring, or modifying this attribution is a breach
+  of this License.
+
+===============================================================================
+
+For full Business Source License 1.1 terms, see:
+https://mariadb.com/bsl11/
