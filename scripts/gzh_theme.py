@@ -51,6 +51,28 @@ SECTION_THEME = {
 ROLES = ["accent", "accent_rgb", "accent_text", "tint_bg", "tint_bg2", "border", "border2", "hl_bg"]
 DEFAULT_FILES = ["gongzhonghao.html", "gongzhonghao_preview.html", "cover_gzh.html"]
 
+# ──────────────────────────────────────────────────────────────────────
+# 自动版权声明（BSL 1.1 要求保留版权声明；本脚本自动追加，避免漏掉）
+# 标记：CREDIT_FOOTER_MARKER —— 若文中已有此标记，则不再追加，避免重复
+# ──────────────────────────────────────────────────────────────────────
+CREDIT_FOOTER_MARKER = "BioSpark · AI For Bios"
+CREDIT_FOOTER_HTML = (
+    '\n<p style="text-align:center; color:#999; font-size:12px; '
+    'margin-top:24px; padding-top:12px; border-top:1px dashed #ddd;">'
+    "本公众号使用 BioSpark 公众号模板<br>"
+    "由 BioSpark · AI For Bios 开源提供<br>"
+    "GitHub: github.com/yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline<br>"
+    "License: BSL 1.1（仅供非商业使用）"
+    "</p>\n"
+)
+
+
+def ensure_credit_footer(text: str) -> tuple:
+    """若文中没有 BioSpark 版权声明，则自动追加到末尾。返回 (新文本, 是否追加)。"""
+    if CREDIT_FOOTER_MARKER in text:
+        return text, False
+    return text + CREDIT_FOOTER_HTML, True
+
 
 def apply_theme(text: str, target: str) -> tuple:
     """把 text 里任何已知主题的色值，按角色替换为 target 主题的色值。返回 (新文本, 替换次数)。"""
@@ -86,19 +108,27 @@ def main():
 
     files = args.files or DEFAULT_FILES
     total, touched = 0, 0
+    footers_added = 0
     for fn in files:
         p = draft / fn
         if not p.exists():
             continue
         old = p.read_text(encoding="utf-8")
         new, n = apply_theme(old, args.theme)
-        if n:
+        # 自动追加 BioSpark 版权声明（BSL 1.1 要求保留）
+        new, added = ensure_credit_footer(new)
+        if added:
+            footers_added += 1
+        if n or added:
             p.write_text(new, encoding="utf-8")
             touched += 1
         total += n
-        print(f"  {fn}: 替换 {n} 处")
+        suffix = " 版权声明:已自动追加" if added else ""
+        print(f"  {fn}: 替换 {n} 处{suffix}")
     print(f"\n✅ 已切到主题「{args.theme}」（{THEMES[args.theme]['accent']}），"
           f"共改 {touched} 个文件 {total} 处色值。")
+    if footers_added:
+        print(f"   🛡️  已自动追加 BioSpark 版权声明到 {footers_added} 个文件（BSL 1.1 要求）。")
     if "cover_gzh.html" in files or (args.files is None):
         print("   提醒：封面 HTML 改了色，需重跑 screenshot_cards.py 重新生成 cover_gzh.png。")
     return 0
