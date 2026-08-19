@@ -1,3 +1,10 @@
+# SPDX-License-Identifier: BSL-1.1
+# Business Source License 1.1 (NOT BUSL-1.1 — the two were briefly confused;
+# the canonical reference is https://mariadb.com/bsl11/, also adopted as
+# "Business Source License 1.1" by the Linux Foundation's SPDX list).
+# This file is the verbatim BSL 1.1 text. See README.md "License" section
+# for the human-readable summary and NOTICE.md for infringement channels.
+
 Business Source License 1.1
 
 Licensor:             BioSpark / AI For Bios
