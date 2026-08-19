@@ -247,11 +247,23 @@ accent 当文字色/实色块（不在 accent 上压字），三套主题都清�
 
 - 即便截图 / 复制 / 洗稿，**你的品牌署名和仓库链接会跟着走**；
 - 提供"原创溯源 + 联系方式 + 举报路径"的三件套；
-- 微信粘贴会保留（全是内联样式 + 文字，没有外部依赖）。
+- 微信粘贴会保留（全是内联样式 + 文字，没有外部依赖）；
+- 满足《人工智能生成合成内容标识办法》对 AI 生成内容的显著标识要求。
+
+**文末三件套渲染顺序**：`互动话题卡 → 来源页脚 → 【AI 辅助生成】标识 → 版权签名 / 举报`。  
+AI 标识放在版权签名**之前**——AI 提示作为内容级免责，版权签名作为法律级归属，读者先看到合规提示再看品牌归属。
 
 ```html
+<!-- AI 生成内容显著标识（依《人工智能生成合成内容标识办法》2025-09-01 生效） -->
+<!-- 位置：来源页脚之后、版权签名之前 -->
+<!-- 颜色：浅暖底 + 深棕字（区别于灰底版权签名，让读者一眼看到 AI 提示） -->
+<div style="margin:24px 0 0;padding:12px 16px;background:#fff8e6;border:1px solid #f5e0a0;border-left:4px solid #ec7a26;border-radius:0 8px 8px 0;font-size:13px;color:#7a5a1a;line-height:1.75;">
+  <div style="font-weight:700;letter-spacing:.5px;margin-bottom:4px;">【AI 辅助生成】</div>
+  <div>本文由 BioSpark 自动化产线辅助生成（选题 / 写作 / 配图 / 排版均含 AI 参与），所有事实性内容已由编辑人工审核。本文为科学传播，<strong style="color:#1a1a1a;">不构成医疗、投资或专业建议</strong>。引用请标注「AI For Bios · BioSpark」。</div>
+</div>
+
 <!-- BioSpark 版权签名 / 公众号溯源水印 — 每篇必带 -->
-<section style="margin:32px 0 0;padding:18px 20px;background:#f8f9fa;border:1px solid #eee;border-radius:10px;font-size:13px;color:#666;line-height:1.85;">
+<section style="margin:16px 0 0;padding:18px 20px;background:#f8f9fa;border:1px solid #eee;border-radius:10px;font-size:13px;color:#666;line-height:1.85;">
   <div style="font-weight:700;color:#1a1a1a;font-size:14px;letter-spacing:.5px;margin-bottom:8px;">
     公众号 <span style="color:#16a394;">「AI For Bios · BioSpark」</span> 原创出品
   </div>
@@ -268,8 +280,9 @@ accent 当文字色/实色块（不在 accent 上压字），三套主题都清�
 
 **渲染规则**（写进 `SKILL.md` 阶段 5-GZH 的固定注入步骤）：
 
-- 位置：**`互动话题卡 → 来源页脚 → 版权签名`**，三段连成文末固定三件套
-- 样式：浅灰底 + accent 标题，跟前文互动话题卡视觉上区分（不抢主色）
+- 位置：**`互动话题卡 → 来源页脚 → AI 辅助生成标识 → 版权签名`**，四段连成文末固定四件套
+- AI 标识样式：浅暖底 + 橙左竖线（用板块主色 `orange` 强调，区别于灰底版权签名）
+- 版权签名样式：浅灰底 + accent 标题，跟前文互动话题卡视觉上区分（不抢主色）
 - 不可关闭、不可关闭、不可关闭（**默认开启；如要隐藏必须 `gzh_publish.py --no-watermark` 显式声明**）
 - 复用：截图洗稿者就算抠图也会被这段背景+水印拖住，**视觉识别成本大增**
 
