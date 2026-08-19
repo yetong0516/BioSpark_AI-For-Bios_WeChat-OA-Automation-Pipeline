@@ -241,6 +241,38 @@ accent 当文字色/实色块（不在 accent 上压字），三套主题都清�
 </section>
 ```
 
+## 8.5 版权签名 / 水印（每篇必带，**程序化默认注入**）⭐新增
+
+**放在「互动话题卡」之后、「来源页脚」之后，或文末最末**。作用：
+
+- 即便截图 / 复制 / 洗稿，**你的品牌署名和仓库链接会跟着走**；
+- 提供"原创溯源 + 联系方式 + 举报路径"的三件套；
+- 微信粘贴会保留（全是内联样式 + 文字，没有外部依赖）。
+
+```html
+<!-- BioSpark 版权签名 / 公众号溯源水印 — 每篇必带 -->
+<section style="margin:32px 0 0;padding:18px 20px;background:#f8f9fa;border:1px solid #eee;border-radius:10px;font-size:13px;color:#666;line-height:1.85;">
+  <div style="font-weight:700;color:#1a1a1a;font-size:14px;letter-spacing:.5px;margin-bottom:8px;">
+    公众号 <span style="color:#16a394;">「AI For Bios · BioSpark」</span> 原创出品
+  </div>
+  <div style="margin-bottom:4px;">本文由 BioSpark 自动化产线辅助生成 + 人工审核后发布</div>
+  <div style="margin-bottom:4px;">源码 / 排版契约 / 卡片系统：
+    <span style="color:#16a394;word-break:break-all;">github.com/yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline</span>
+  </div>
+  <div style="color:#999;font-size:12px;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e5e5;">
+    转载 / 洗稿 / 未授权使用本产线产出内容均构成侵权。
+    举报邮箱：<span style="color:#16a394;">dmca@biospark.example</span>（占位，发布前替换为真实地址）
+  </div>
+</section>
+```
+
+**渲染规则**（写进 `SKILL.md` 阶段 5-GZH 的固定注入步骤）：
+
+- 位置：**`互动话题卡 → 来源页脚 → 版权签名`**，三段连成文末固定三件套
+- 样式：浅灰底 + accent 标题，跟前文互动话题卡视觉上区分（不抢主色）
+- 不可关闭、不可关闭、不可关闭（**默认开启；如要隐藏必须 `gzh_publish.py --no-watermark` 显式声明**）
+- 复用：截图洗稿者就算抠图也会被这段背景+水印拖住，**视觉识别成本大增**
+
 ---
 
 ## 9. 互动话题卡（每篇结尾必带，引导评论）

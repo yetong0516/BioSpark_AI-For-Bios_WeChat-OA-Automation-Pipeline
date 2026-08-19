@@ -141,3 +141,40 @@ body { background: #f5f5f5; }
   border: 1px solid rgba(78,205,196,0.3); border-radius: 6px;
   padding: 5px 14px; font-size: 20px; color: #4ecdc4;
 }
+
+/* ===== Copyright watermark (every card) — BioSpark 原创保护 =====
+ * 注入位置：每张卡片的右上角（封面/暗卡）或右下角（白底内容卡，避开顶部 .num/h2）。
+ * 作用：截图洗稿必带，让抄袭者在二次发布时必须裁掉水印（增加其成本）。
+ * 配合 gzh_style.md 第 8.5 节「版权签名」使用，公众号端 + 小红书端 双重溯源。
+ */
+.card::after {
+  content: "AI For Bios · BioSpark";
+  position: absolute;
+  right: 48px;
+  top: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(78,205,196,0.9);
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  z-index: 99;
+  pointer-events: none;
+  white-space: nowrap;
+}
+/* 内容卡白底（顶部被 .num / h2 占满）：水印改放右下角，避开正文 */
+.card-white::after {
+  right: 32px;
+  top: auto;
+  bottom: 24px;
+  color: rgba(78,205,196,0.95);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  font-size: 15px;
+}
+/* 暗总结卡：放右上角避开 .h2、.ptx、.ftr 区域 */
+.card-dark::after {
+  color: rgba(78,205,196,0.95);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  font-size: 17px;
+  right: 56px;
+  top: 24px;
+}

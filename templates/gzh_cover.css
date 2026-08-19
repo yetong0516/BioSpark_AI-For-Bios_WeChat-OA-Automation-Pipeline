@@ -54,3 +54,23 @@ body { background: #f5f5f5; }
   position: absolute; right: 36px; bottom: 22px;
   font-size: 14px; color: rgba(255,255,255,0.45);
 }
+
+/* ===== Copyright watermark — BioSpark 原创署名 =====
+ * 公众号封面右下角：即使封面图被截走单独使用，仍带项目署名。
+ * 配色：暗背景上的浅青绿 + 强对比阴影，确保深色封面图上也能读。
+ */
+.card-cover-gzh::after {
+  content: "AI For Bios · BioSpark   |   github.com/yetong0516/BioSpark_AI-For-Bios_WeChat-OA-Automation-Pipeline";
+  position: absolute;
+  right: 36px;
+  bottom: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(78,205,196,0.95);
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  z-index: 99;
+  pointer-events: none;
+  max-width: 70%;
+  text-align: right;
+}

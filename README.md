@@ -174,4 +174,34 @@ ai4s_pipeline/
 
 ---
 
+## Content copyright & originality
+
+Code is under [LICENSE](LICENSE). **The content this pipeline produces is copyrighted separately.**
+
+The following are © BioSpark / AI For Bios and protected under copyright law:
+
+- **Topic selection and editorial framing** (which paper, which angle, which section)
+- **Final Chinese copy** (leads, editor's note, sub-leads, body, captions, source notes, discussion prompts)
+- **Layout and typographic design** (the 6-part academic scaffold, inline-style HTML contract, section accent system, card visual system)
+- **Figure selection logic and captions**
+- **Xiaohongshu 6-card decks and WeChat covers** rendered by this pipeline
+
+**Unauthorised use is prohibited**: any WeChat OA, Xiaohongshu, blog, or paid-content account that
+**republishes, rewrites (洗稿), or scrapes** this project's pipeline output — without written
+permission and source attribution — is infringing. See:
+
+- **[COPYRIGHT.md](COPYRIGHT.md)** — full copyright statement (what is owned, what is allowed, what is forbidden)
+- **[NOTICE.md](NOTICE.md)** — how to report infringement, mail template, response SLA
+
+To report infringement: **[dmca@biospark.example](mailto:dmca@biospark.example)** *(placeholder,
+replace with your real mailbox before publishing)*.
+
+> ⚠️ GitHub-side notices have **no enforcement power on their own** — they establish authorship
+> and provide a paper trail. **The actual protection comes from**:
+> 1. The 微信原创声明 (WeChat Original-Author declaration on each article)
+> 2. Persistent git commit history with timestamps on every draft (already in this repo)
+> 3. Hard evidence: copyright registration (中国版权保护中心) for your flagship series
+
+---
+
 *Runtime output (`drafts/`), credentials (`secrets/weixin.json`), and internal ledgers (`state/`, `STATUS.md`) are intentionally excluded from this repository.*
